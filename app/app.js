@@ -14,7 +14,7 @@ const dotenv = require("dotenv"); // nodes.js 서버의 포트, DB관리 정보�
 dotenv.config();
 
 // 데이터베이스 세팅
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MongoDB_URI, {
     dbName: "4weeks_test",
     useNewUrlParser: true,
     useUnifiedTopology: true,
