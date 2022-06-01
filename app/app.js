@@ -12,10 +12,9 @@ const bodyParser = require("body-parser"); // req.body 데이터를 사용자가
 const authMiddleware = require("./src/routes/auth-middleware");
 const dotenv = require("dotenv"); // nodes.js 서버의 포트, DB관리 정보들을 관리할 수 있게함
 dotenv.config();
-const { MONGODB_URI } = process.env;
 
 // 데이터베이스 세팅
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
     dbName: "4weeks_test",
     useNewUrlParser: true,
     useUnifiedTopology: true,
