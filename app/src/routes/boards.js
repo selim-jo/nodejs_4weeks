@@ -48,7 +48,6 @@ router.patch('/boards/:boardId', authMiddleware, async (req, res) => {
 
 // 게시글 삭제 API
 router.delete('/boards/:boardId', authMiddleware, async (req, res) => {
-    const { title, content } = req.body;
     const board = await Board.findOne( { _id: req.params.boardId });
     if (![board]) {
         return res.status(404).json({ success: false, errorMessage: "게시글이 없습니다."});
