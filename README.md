@@ -36,16 +36,16 @@
 
 -------------
 ### API 설계
-|  NO  |  기능	| method | api |  request | response  |
-|----	|---:	|---	|---	|---	|---	|
-|   1 	|  회원가입 	|  POST 	|  api/users 	|  nickname, password, confirmPassword	|  HTTP 상태코드 및 메시지 	|
-|   2  	|  로그인 	|   POST	|  api/auth 	|  nickname, password 	|  HTTP 상태코드 및 메시지 	|
-|   3 	|  전체 게시글 목록 조회&nbsp;&nbsp; 	|  GET 	|  api/boards 	|  - 	|  nickname, title, content, createdAt(JSON)	|
-|   4 	|  게시글 작성 	|  POST 	|   api/boards	|  title, content 	|   결과 메시지	|
-|   5 	|  게시글 조회 	|   GET	|  api/boards/:boardId 	|   boardId	|  nickname, title, content, createdAt(JSON)	|
-|   6 	|  게시글 수정	|  PATCH 	|   api/boards/:boardId	|  boardId, title, content 	|   HTTP 상태코드 및 메시지	|
-|   7 	|  게시글 삭제 	|  DELETE 	|   api/boards/:boardId	|  boardId, title, content |  HTTP 상태코드 및 메시지 	|
-|   8 	|  댓글 목록 조회 	|  GET 	|  api/boards/:boardId/comments 	|  boardId 	|  boardId, nickname, comment, createdAt(JSON) 	|
-|   9 	|  댓글 작성 	|  POST 	|   api/boards/:boardId/comments	|  boardId, comment 	|   HTTP 상태코드 및 메시지	|
-|  10 	|  댓글 수정 	|  PATCH 	|  api/boards/:boardId/comments/:commentId 	|  boardId, comment 	|   HTTP 상태코드 및 메시지	|
-|  11  	|  댓글 삭제	|   DELETE	|  api/boards/:boardId/comments/:commentId 	|  boardId, comment	|   HTTP 상태코드 및 메시지	|
+| 기능	| method | api |  request | response  |
+|----	|---	|---	|---	|---	|
+| 회원가입 	|  POST 	|  api/users 	|  nickname, password, confirmPassword	|  HTTP 상태코드 및 메시지 	|
+|  로그인 	|   POST	|  api/auth 	|  nickname, password 	|  HTTP 상태코드 및 메시지 	|
+|  전체 게시글 목록 조회 	|  GET 	|  api/boards 	|  - 	|  nickname, title, content, createdAt(JSON)	|
+|  게시글 작성 	|  POST 	|   api/boards	|  title, content 	|   결과 메시지	|
+|  게시글 조회 	|   GET	|  api/boards/:boardId 	|   boardId	|  nickname, title, content, createdAt(JSON)	|
+|  게시글 수정	|  PATCH 	|   api/boards/:boardId	|  boardId, title, content 	|   HTTP 상태코드 및 메시지	|
+|  게시글 삭제 	|  DELETE 	|   api/boards/:boardId	|  boardId |  HTTP 상태코드 및 메시지 	|
+|  댓글 목록 조회 	|  GET 	|  api/boards/:boardId/comments 	|  boardId 	|  boardId, nickname, comment, createdAt(JSON) 	|
+|  댓글 작성 	|  POST 	|   api/boards/:boardId/comments	|  boardId, comment 	|   HTTP 상태코드 및 메시지	|
+|  댓글 수정 	|  PATCH 	|  api/boards/:boardId/comments/:commentId 	|  boardId, commentId comment 	|   HTTP 상태코드 및 메시지	|
+|  댓글 삭제	|   DELETE	|  api/boards/:boardId/comments/:commentId 	|  boardId, commentId	|   HTTP 상태코드 및 메시지	|
